@@ -10,6 +10,8 @@ module.exports = {
       'cardBD': "url('/public/images/pokedex.webp')",
       'cardJ1': "url('/public/images/jadoo_1.png')",
       'cardJ2': "url('/public/images/jadoo_2.png')",
+      'cardD1': "url('/public/images/home_crop.png')",
+      'cardD2': "url('/public/images/profil.png')",
       },
       cursor: {
         'cursor': 'url(hand.cur), auto',

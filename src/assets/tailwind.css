@@ -212,6 +212,16 @@ circle {
   transition: 1s;
 }
 
+.rotatedD2 {
+  transform: rotate(10deg) translateX(100px);
+  transition: 1s;
+}
+
+.rotatedD1 {
+  transform: rotate(-10deg) translateX(-100px);
+  transition: 1s;
+}
+
 @keyframes constantMove{
   0% {
     transform: rotate(-30deg);
