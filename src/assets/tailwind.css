@@ -1,0 +1,229 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Voyage;
+    src: url(Fonts/Voyage-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: Voyage Bold;
+    src: url(Fonts/Voyage-Bold.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: Staff;
+    src: url(Fonts/Staff-Regular.ttf) format('truetype');
+  }
+};
+
+* {
+  font-family: staff;
+}
+
+@keyframes appear {
+  0%{
+    transform:scale(0);
+  }
+  100%{
+    transform:scale(1);
+  }
+}
+
+@keyframes animateHD {
+  0%{
+    transform: translateX(0px) scale(0.7);
+  }
+  10%{
+    transform: translateX(0px) scale(0.7);
+  }
+  25%{
+    transform: translateX(-100px) scale(0.7);
+  }
+  50%{
+    transform: translateX(-100px) scale(0.7) translateY(100px);
+  }
+  75%{
+    transform: translateX(100px) scale(0.7);
+  }
+  100%{
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes animateHM {
+  0%{
+    transform: translateX(0px);
+  }
+  25%{
+    transform: translateX(100px) translateY(200px);
+  }
+  50%{
+    transform: translateX(-100px) translateY(200px);
+  }
+  75%{
+    transform: translateX(-200px) translateY(-50px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animateHL {
+  0%{
+    transform: translateX(0px) scale(0.7);
+  }
+  25%{
+    transform: translateX(-100px) scale(0.7) translateY(-200px);
+  }
+  50%{
+    transform: translateX(100px) scale(0.7) translateY(200px);
+  }
+  75%{
+    transform: translateX(200px) scale(1) translateY(50px);
+  }
+  100%{
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes animateBL {
+  0%{
+    transform: translateX(0px) scale(0.5);
+  }
+  25%{
+    transform: translateX(100px) scale(0.5) translateY(-200px);
+  }
+  50%{
+    transform: translateX(100px) scale(0.7) translateY(-200px);
+  }
+  75%{
+    transform: translateX(-100px) scale(0.7) translateY(50px);
+  }
+  100%{
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes animateBM {
+  0%{
+    transform: translateX(0px) scale(0.5);
+  }
+  25%{
+    transform: translateX(-100px) scale(0.5) translateY(200px);
+  }
+  50%{
+    transform: translateX(100px) scale(0.7) translateY(-200px);
+  }
+  75%{
+    transform: translateX(-200px) scale(0.7) translateY(50px);
+  }
+  100%{
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes animateBD {
+  0%{
+    transform: translateX(0px) scale(0.5);
+  }
+  25%{
+    transform: translateX(-100px) scale(0.5) translateY(-200px);
+  }
+  50%{
+    transform: translateX(-100px) scale(0.7) translateY(-200px);
+  }
+  75%{
+    transform: translateX(-200px) scale(0.7) translateY(50px);
+  }
+  100%{
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.bord{
+  animation: appear 0.5s ;
+}
+
+.cardHD{
+  animation: animateHD 2.5s ;
+}
+
+.cardHM{
+  animation: animateHM 3s ;
+}
+
+.cardHL{
+  animation: animateHL 2.5s ;
+}
+
+.cardBL{
+  animation: animateBL 2.5s ;
+}
+
+.cardBM{
+  animation: animateBM 3s ;
+}
+
+.cardBD{
+  animation: animateBD 2.5s ;
+}
+
+circle {
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+  animation: circle 5s forwards;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+}
+
+@keyframes circle {
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+.scale {
+  transform: translateY(-1300px);
+  transition: 5s;
+}
+
+.rotatedD {
+  transform: rotate(10deg) translateX(100px);
+  transition: 1s;
+}
+
+.rotatedL {
+  transform: rotate(-10deg) translateX(-100px);
+  transition: 1s;
+}
+
+.rotatedJ1 {
+  transform: rotate(10deg) translateX(100px);
+  transition: 1s;
+}
+
+.rotatedJ2 {
+  transform: rotate(-10deg) translateX(-100px);
+  transition: 1s;
+}
+
+@keyframes constantMove{
+  0% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+.constantMove {
+  animation: constantMove infinite 5s;
+}
